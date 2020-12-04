@@ -1,8 +1,11 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+
+import Container from '../shared/Container'
 import './Navbar.styles.scss';
 
 const Navbar = (props) => (
+  <Container>
   <ul className="navbar">
     <li className="navbar-item">
       <NavLink to='/' exact
@@ -17,6 +20,7 @@ const Navbar = (props) => (
       </NavLink>
     </li>
   </ul>
+  </Container>
 );
 
 export default Navbar;

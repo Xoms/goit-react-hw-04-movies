@@ -5,7 +5,10 @@ import api from '../../services/apiService';
 
 import SearchBar from '../../components/Searchbar';
 import FilmsList from '../../components/FilmsList';
+import Container from '../../components/shared/Container';
+
 import './Movies.styles.scss';
+
 
 export default class Movies extends Component {
   state = {
@@ -46,7 +49,9 @@ export default class Movies extends Component {
     return(
       <> 
       <SearchBar onSubmit={this.onSearchSubmit} />
-      {movies && <FilmsList movies={movies}/>}
+      <Container>
+        {movies && <FilmsList movies={movies}/>}
+      </Container>
       </>
     );
   }

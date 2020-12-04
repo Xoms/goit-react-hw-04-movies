@@ -9,7 +9,9 @@ export default class Cast extends Component {
   }
 
   componentDidMount(){
+    
     const id = this.props.match.params.movieId;
+    console.log(id)
     api.getCast(id).then( cast => this.setState({cast}));
   }
 

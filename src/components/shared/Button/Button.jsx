@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { Btn } from './Button.styles';
 
 const Button = (props) => {
-  const { caption, handleClick } = props
+  const { caption, onClick } = props
   return (
-  <Btn type="button"  onClick={handleClick}> 
+  <Btn type="button"  onClick={onClick}> 
     {caption}
   </Btn>
 )};

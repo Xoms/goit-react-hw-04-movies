@@ -1,9 +1,10 @@
 import React, { Component, Suspense } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom'; //Link без доп классов
-import Loader from 'react-loader-spinner';
+import { Route, Switch, /*Redirect*/ } from 'react-router-dom'; //Link без доп классов
+
 
 import routes from './routes';
 import Layout from './components/shared/Layout';
+import Loader from './components/shared/Loader';
 
 // import Home from './views/Home';
 // import Movies from './views/Movies';
@@ -19,18 +20,12 @@ class App extends Component {
     
     return (
       <Layout>
-        <Suspense fallback={<Loader
-          type="Puff"
-          color="#00BFFF"
-          height={100}
-          width={100}
-          />} 
-        >
+        <Suspense fallback={<Loader/>}>
           <Switch>
             {routes.map(route => <Route key={route.path} {...route} />)}
             {/* <Redirect to='/' /> */}
           </Switch>
-        </Suspense>       
+        </Suspense>
       </Layout>
     );
   }

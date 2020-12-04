@@ -1,6 +1,5 @@
 import { lazy } from "react";
 
-
 const routes = [
     {   label: "Home",
         path: "/",
@@ -16,13 +15,11 @@ const routes = [
     {   
         label: "Details",
         path: "/movies/:movieId",
-        exact: true,
+        exact: false,
         component: lazy(() => import("./views/MoviesDetails"))
     },
     {   
-        label: "Not Found",
-        path: null,
-        exact: true,
+        label: "Not Found",        
         component: lazy(() => import("./views/NotFound"))
     },
 ]

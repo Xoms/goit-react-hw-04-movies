@@ -5,7 +5,7 @@ import './FilmCard.styles.scss';
 
 const FilmCard = ({title, poster_path, release_date, vote_average, overview, genres}) => (
   <div className="card">
-    <img src={poster_path} alt={title} className="card-image"/>
+    <img src={poster_path} alt={title} className="card__image"/>
     <div className="card__meta">
       <h2 className="card__title">{title} ({release_date})</h2>
       <p className="card__user-score">{vote_average * 10}%</p>
